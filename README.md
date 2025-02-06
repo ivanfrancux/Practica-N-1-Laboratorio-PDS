@@ -226,7 +226,7 @@ Este ejercicio permitió no solo conocer y aplicar técnicas de análisis estad�
 ## Enlace al código
 El código utilizado para el análisis estadístico y el procesamiento de la señal EMG, incluyendo el cálculo de las estadísticas, la generación de los gráficos, el análisis de ruido y la relación señal-ruido (SNR), está disponible en el siguiente enlace:
 
-lab_uno.py
+![código](lab_uno.py)
 
 Este archivo contiene todas las implementaciones realizadas durante la práctica y se puede descargar o consultar directamente desde GitHub.
 
