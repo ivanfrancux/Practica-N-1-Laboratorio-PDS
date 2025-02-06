@@ -209,7 +209,12 @@ Se genera un gráfico de cuatro subgráficas para comparar la señal original co
 
 Imágenen de los resultados de SNR:
 
-![SNR realizado con pyton](Figure_SNR.png.jpeg)
+![SNR realizado con pyton](Figure_SNR.png)
+
+## Resultados 
+
+![Resuktados SNR](Figure_SNR.png)
+
 
 
 ## Librerias 
