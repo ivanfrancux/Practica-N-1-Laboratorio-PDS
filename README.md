@@ -26,15 +26,36 @@ tiempo = np.arange(len(senal)) / fs
 
 Señal electromiografica procesada 
 
-### Operaciones Estadisticas 
-para intrpretar los datos estaditicos procedemos a realizar este analisis para esto podemos hacerlo manualmente o con "Numpy" la cual nos perminte calcular estos datos estadisticos.
+# **Operaciones Estadísticas**
+
+Para interpretar los datos estadísticos, realizamos un análisis utilizando dos enfoques:  
+
+1. **Cálculo manual**, programando las fórmulas desde cero.  
+2. **Uso de la librería `NumPy`**, que facilita el cálculo de estadísticas de forma eficiente.  
+
+## **Cálculo con Librerías (`NumPy`)**  
+`NumPy` nos permite obtener los valores estadísticos de manera rápida y precisa con funciones predefinidas:  
+- **Media (`mean`)**: Calcula el promedio de los valores en la señal.  
+- **Desviación estándar (`std`)**: Mide la dispersión de los datos con respecto a la media.  
+- **Coeficiente de variación**: Expresa la desviación estándar en porcentaje de la media.  
+
 ```python
-# Calcular estadísticas
+import numpy as np
+import matplotlib.pyplot as plt
+
 media_np = np.mean(senal)
-desvest_np = np.std(senal, ddof=1)
+desvest_np = np.std(senal, ddof=1)  # ddof=1 para la muestra
 coef_var_np = (desvest_np / media_np) * 100
 
-## Cálculo manual con bucles
+```
+
+## **Cálculo Manual (Usando Bucles)**  
+Para entender mejor cómo funcionan estos cálculos, los implementamos manualmente: 
+- **Media manual**: Se suman todos los valores de la señal y se dividen entre la cantidad total de datos. 
+- **Desviación estándar manual**: Se calcula restando la media a cada dato, elevándolo al cuadrado, sumando todos estos valores y dividiéndolos entre n-1.
+- **Coeficiente de variación manual**: Se obtiene dividiendo la desviación estándar entre la media y multiplicando por 100.
+
+```python
 medias_manual = []
 desviaciones_manual = []
 for canal in range(senal.shape[1]):  
@@ -50,7 +71,13 @@ for canal in range(senal.shape[1]):
         suma_cuadrados += (senal[i][canal] - media_manual) ** 2
     desviacion_manual = (suma_cuadrados / (len(senal) - 1)) ** 0.5
     desviaciones_manual.append(desviacion_manual)
+
 ```
+## **Comparación de Resultados** 
+
+Los valores obtenidos por ambos métodos no presentan una gran diferencia, lo que confirma que los cálculos manuales y con NumPy son equivalentes. Sin embargo, usar NumPy es más eficiente en términos de tiempo y código, especialmente cuando se trabaja con grandes volúmenes de datos.
+
+
 Con esto obtenemos los siguentes resltados estadisticos:
 ![Histograma realizado con pyton](Histograma.png)
 
