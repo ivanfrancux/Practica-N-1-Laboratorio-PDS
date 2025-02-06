@@ -84,6 +84,12 @@ Con esto obtenemos los siguentes resltados estadisticos:
 
 
 ### Histograma 
+
+El análisis visual de la señal EMG procesada incluye un histograma que representa la distribución de las amplitudes de la señal. Un histograma es una representación gráfica de la distribución de los valores de una variable, en este caso, la amplitud de la señal electromiográfica. La función hist() de la librería matplotlib permite crear este gráfico, que nos muestra cómo se distribuyen los valores de la señal en intervalos específicos, o "bins". Esta visualización nos ayuda a entender la variabilidad de la señal y detectar posibles características anómalas o patrones relevantes.
+
+
+
+
 ```python
 # Graficar histograma
     axs[1].hist(senal.flatten(), bins=50, density=True, alpha=0.6, color='b')
@@ -92,7 +98,14 @@ Con esto obtenemos los siguentes resltados estadisticos:
     axs[1].set_ylabel("Frecuencia")
     axs[1].grid()
 ```
+
+La imagen a continuación muestra el histograma de la señal procesada:
+
 ![Histograma realizado con pyton](Histograma.jpeg)
+
+Interpretación del histograma:
+El histograma muestra cómo se distribuyen los valores de la señal EMG a lo largo del tiempo, y nos da una idea de la amplitud y la frecuencia de aparición de estos valores. Dependiendo de la forma y el comportamiento del histograma, podemos inferir características sobre el tipo de actividad muscular o la presencia de ruido en la señal.
+
 ## Ruido 
 Ruido Gausiano 
 ```python
