@@ -103,8 +103,21 @@ La imagen a continuación muestra el histograma de la señal procesada:
 
 ![Histograma realizado con pyton](Histograma.jpeg)
 
-Interpretación del histograma:
+**Interpretación del histograma**:
 El histograma muestra cómo se distribuyen los valores de la señal EMG a lo largo del tiempo, y nos da una idea de la amplitud y la frecuencia de aparición de estos valores. Dependiendo de la forma y el comportamiento del histograma, podemos inferir características sobre el tipo de actividad muscular o la presencia de ruido en la señal.
+
+### Función de Probabilidad de la Señal EMG
+La función de probabilidad, también conocida como función de densidad de probabilidad (PDF, por sus siglas en inglés), describe la probabilidad de que una variable aleatoria tome un valor dentro de un intervalo específico. En este caso, estamos interesados en analizar cómo se distribuyen los valores de la señal electromiográfica (EMG) en relación con su media y desviación estándar.
+
+Para obtener la función de probabilidad de la señal EMG, utilizamos la librería scipy.stats de Python, que proporciona funciones para trabajar con distribuciones estadísticas. En este caso, aplicamos una distribución normal (gaussiana) que es comúnmente utilizada para modelar variables que se distribuyen de manera similar a la señal EMG. La función norm.pdf() de scipy nos permite generar la curva de probabilidad de los valores de la señal.
+
+La imagen a continuación muestra la función de probabilidad de la señal EMG procesada:
+
+![Funcion de probabilidad realizado con pyton](Histograma.jpeg)
+
+**Interpretación de la función de probabilidad**:
+La curva resultante muestra cómo se distribuyen los valores de amplitud de la señal EMG en torno a su media. El área bajo la curva representa la probabilidad acumulada, lo que nos da una idea de la "concentración" de los valores de la señal alrededor de la media. Si la señal sigue una distribución aproximadamente normal, la mayor parte de los valores se concentrarán cerca de la media, y la probabilidad disminuye a medida que nos alejamos de ella.
+
 
 ## Ruido 
 Ruido Gausiano 
