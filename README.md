@@ -51,8 +51,23 @@ for canal in range(senal.shape[1]):
     desviacion_manual = (suma_cuadrados / (len(senal) - 1)) ** 0.5
     desviaciones_manual.append(desviacion_manual)
 ```}
-
 ```
+Con esto obtenemos los siguentes resltados estadisticos:
+![Histograma realizado con pyton](Histograma.png)
+
+### Histograma 
+```python
+# Graficar histograma
+    axs[1].hist(senal.flatten(), bins=50, density=True, alpha=0.6, color='b')
+    axs[1].set_title("Histograma de la señal EMG")
+    axs[1].set_xlabel("Amplitud")
+    axs[1].set_ylabel("Frecuencia")
+    axs[1].grid()
+
+```}
+```
+![Histograma realizado con pyton](Histograma.jpeg)
+## Relación Señal Ruido (SNR)
 ## Librerias 
  wfdb
  
@@ -72,6 +87,6 @@ for canal in range(senal.shape[1]):
 
  #### 
 
- ## Relación Señal Ruido (SNR)
+
 
  
