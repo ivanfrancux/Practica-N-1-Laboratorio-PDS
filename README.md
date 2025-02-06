@@ -22,6 +22,8 @@ fs = registro.fs  # Frecuencia de muestreo
 ```}
 
 ```
+![Histograma realizado con pyton](Histograma.png)
+
 ### Señal en Python 
 
 ### Operaciones Estadisticas 
