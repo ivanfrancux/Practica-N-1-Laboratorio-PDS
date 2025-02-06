@@ -213,7 +213,7 @@ Se genera un gráfico de cuatro subgráficas para comparar la señal original co
 
 ## Resultados 
 
-![Resuktados SNR](Figure_SNR.png)
+![Resuktados SNR](Rs.jpeg)
 
 ## Conclusión
 En esta práctica del laboratorio de procesamiento digital de señales, se logró realizar un análisis completo de una señal electromiográfica (EMG) obtenida de PhysioNet, utilizando Python y sus librerías correspondientes. Se descargó con éxito una señal EMG desde la base de datos PhysioNet y se importó a Python usando la librería wfdb, lo que permitió visualizar y manejar la señal para su posterior análisis. Se calcularon estadísticas clave como la media, la desviación estándar y el coeficiente de variación de la señal, tanto de forma manual, utilizando bucles y fórmulas matemáticas, como utilizando la librería NumPy, obteniendo resultados consistentes en ambos casos, lo que valida la precisión de las herramientas empleadas.
@@ -230,7 +230,8 @@ El código utilizado para el análisis estadístico y el procesamiento de la se�
 
 Este archivo contiene todas las implementaciones realizadas durante la práctica y se puede descargar o consultar directamente desde GitHub.
 
-
+## Requisitos
+Pyton 3.9.0 ó superior
 
 ## Librerias 
  wfdb
