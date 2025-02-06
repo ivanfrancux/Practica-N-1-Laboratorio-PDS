@@ -215,7 +215,20 @@ Se genera un gráfico de cuatro subgráficas para comparar la señal original co
 
 ![Resuktados SNR](Figure_SNR.png)
 
+## Conclusión
+En esta práctica del laboratorio de procesamiento digital de señales, se logró realizar un análisis completo de una señal electromiográfica (EMG) obtenida de PhysioNet, utilizando Python y sus librerías correspondientes. Se descargó con éxito una señal EMG desde la base de datos PhysioNet y se importó a Python usando la librería wfdb, lo que permitió visualizar y manejar la señal para su posterior análisis. Se calcularon estadísticas clave como la media, la desviación estándar y el coeficiente de variación de la señal, tanto de forma manual, utilizando bucles y fórmulas matemáticas, como utilizando la librería NumPy, obteniendo resultados consistentes en ambos casos, lo que valida la precisión de las herramientas empleadas.
 
+Se visualizó el comportamiento de la señal a través de un histograma que mostró su distribución y se calculó su función de probabilidad, lo que permitió comparar la distribución de la señal con una normal teórica, proporcionando información valiosa sobre la naturaleza de los datos y su forma. Además, se implementaron diferentes tipos de ruido (gaussiano, de artefacto e impulso) y se calculó la relación señal-ruido (SNR) para cada uno de ellos. Este análisis fue crucial para entender cómo los distintos tipos de ruido afectan la señal y cómo se puede evaluar la calidad de las señales biomédicas en entornos reales.
+
+Este ejercicio permitió no solo conocer y aplicar técnicas de análisis estadístico y procesamiento de señales, sino también comprender la importancia de evaluar y mejorar la calidad de las señales biomédicas para su uso en diagnósticos médicos. Los resultados obtenidos a lo largo de la práctica evidencian la efectividad del enfoque utilizado para el procesamiento de señales EMG y su capacidad para simular escenarios con ruido, lo cual es esencial en aplicaciones biomédicas reales.
+
+
+## Enlace al código
+El código utilizado para el análisis estadístico y el procesamiento de la señal EMG, incluyendo el cálculo de las estadísticas, la generación de los gráficos, el análisis de ruido y la relación señal-ruido (SNR), está disponible en el siguiente enlace:
+
+lab_uno.py
+
+Este archivo contiene todas las implementaciones realizadas durante la práctica y se puede descargar o consultar directamente desde GitHub.
 
 
 
