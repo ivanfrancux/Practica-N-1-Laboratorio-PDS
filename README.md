@@ -1,8 +1,8 @@
 # Practica-N-1-Laboratorio-PDS
 ## Introducción  
-El desarrollo de la primera práctica del laboratorio de procesamiento digital de señales tiene como objetivo la creación de un código en Python para el análisis estadístico de una señal fisiológica extraída de PhysioNet. Este análisis es importante a la hora de manipular una señal biomédica ya que permite caracterizarla y así mejorar su interpretación, lo cual es esencial para diagnósticos y monitoreos médicos.
+El objetivo de esta primera práctica del laboratorio de Procesamiento Digital de Señales (PDS) es desarrollar un código en Python para realizar un análisis estadístico sobre una señal fisiológica obtenida de PhysioNet. Este tipo de análisis es crucial al trabajar con señales biomédicas, ya que permite caracterizar la señal y mejorar su interpretación, lo cual es esencial para realizar diagnósticos y monitoreos médicos precisos.
 ## Señal EMG physio.net
-Para el desarollo de la practica el primer paso fue buscar una señal Electromiografica obtenida por medio de physio.net con la cual pudimos extraer los archivos '.dat' y '.hea, una vez descargada la señal se importa a Python  y con la libreria "wfdb"podemos leer la señal y visualizarla para despues procesarla estadisticamente. 
+Para desarrollar esta práctica, el primer paso fue buscar una señal electromiográfica (EMG) proporcionada por PhysioNet. A partir de esta señal, descargamos los archivos .dat y .hea. Una vez obtenidos, importamos la señal a Python y, utilizando la librería wfdb, podemos leer y visualizar los datos para luego procesarlos estadísticamente.
 
 ```python
 # Ruta y nombre del archivo predefinidos
@@ -24,7 +24,10 @@ tiempo = np.arange(len(senal)) / fs
 ```
 ![Histograma realizado con pyton](señal.png)
 
-Señal electromiografica procesada 
+**Señal electromiográfica procesada**
+En esta sección se presenta la señal procesada y sus características estadísticas, las cuales fueron obtenidas utilizando herramientas de Python.
+
+![Histograma realizado con pyton](señal.png)
 
 # **Operaciones Estadísticas**
 
