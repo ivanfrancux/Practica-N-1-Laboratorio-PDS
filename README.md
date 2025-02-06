@@ -77,9 +77,9 @@ for canal in range(senal.shape[1]):
 
 Los valores obtenidos por ambos métodos no presentan una gran diferencia, lo que confirma que los cálculos manuales y con NumPy son equivalentes. Sin embargo, usar NumPy es más eficiente en términos de tiempo y código, especialmente cuando se trabaja con grandes volúmenes de datos.
 
-
 Con esto obtenemos los siguentes resltados estadisticos:
-![Histograma realizado con pyton](Histograma.png)
+![Datos Estadísticos](datos_estadisticos.jpg)
+
 
 ### Histograma 
 ```python
