@@ -4,24 +4,26 @@ El desarrollo de la primera práctica del laboratorio de procesamiento digital d
 ## Señal EMG physio.net
 Para el desarollo de la practica el primer paso fue buscar una señal Electromiografica obtenida por medio de physio.net con la cual pudimos extraer los archivos '.dat' y '.hea, una vez descargada la señal se importa a Python  y con la libreria "wfdb"podemos leer la señal y visualizarla para despues procesarla estadisticamente. 
 
-
 ```python
-#finir ruta de los archivos
+# Ruta y nombre del archivo predefinidos
 carpeta = r"C:\Users\alejo\Desktop\señales"
 nombre_archivo = "emg_healthy"  # Sin extensión
 ruta_completa = os.path.join(carpeta, nombre_archivo)
 
-#rificar si los archivos existen
+# Verificar si los archivos existen
 if not os.path.exists(ruta_completa + ".dat") or not os.path.exists(ruta_completa + ".hea"):
-    print("Error: No se encontraron los archivos .dat y .hea en la ruta especificada.")
-    exit()
+    raise FileNotFoundError("No se encontraron los archivos .dat y .hea en la ruta especificada.")
 
-#er la señal desde los archivos .dat y .hea
+# Leer los datos de los archivos
 registro = wfdb.rdrecord(ruta_completa)
 senal, info = registro.p_signal, registro.sig_name
 fs = registro.fs  # Frecuencia de muestreo
+
+# Crear eje de tiempo
+tiempo = np.arange(len(senal)) / fs
 ```
-![Histograma realizado con pyton](Histograma.png)
+![Histograma realizado con pyton](señal.png)
+
 Señal electromiografica procesada 
 
 ### Operaciones Estadisticas 
