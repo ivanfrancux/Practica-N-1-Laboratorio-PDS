@@ -88,8 +88,6 @@ Con esto obtenemos los siguentes resltados estadisticos:
 El análisis visual de la señal EMG procesada incluye un histograma que representa la distribución de las amplitudes de la señal. Un histograma es una representación gráfica de la distribución de los valores de una variable, en este caso, la amplitud de la señal electromiográfica. La función hist() de la librería matplotlib permite crear este gráfico, que nos muestra cómo se distribuyen los valores de la señal en intervalos específicos, o "bins". Esta visualización nos ayuda a entender la variabilidad de la señal y detectar posibles características anómalas o patrones relevantes.
 
 
-
-
 ```python
 # Graficar histograma
     axs[1].hist(senal.flatten(), bins=50, density=True, alpha=0.6, color='b')
@@ -119,8 +117,25 @@ La imagen a continuación muestra la función de probabilidad de la señal EMG p
 La curva resultante muestra cómo se distribuyen los valores de amplitud de la señal EMG en torno a su media. El área bajo la curva representa la probabilidad acumulada, lo que nos da una idea de la "concentración" de los valores de la señal alrededor de la media. Si la señal sigue una distribución aproximadamente normal, la mayor parte de los valores se concentrarán cerca de la media, y la probabilidad disminuye a medida que nos alejamos de ella.
 
 
-## Ruido 
-Ruido Gausiano 
+## Ruido y Relación Señal-Ruido (SNR)
+
+En el análisis de señales biomédicas, como las señales electromiográficas (EMG), es común encontrar diferentes tipos de ruido que pueden interferir con la señal útil. El ruido puede originarse de diversas fuentes, como artefactos del equipo de medición, interferencias externas o movimientos involuntarios del paciente. Estos ruidos pueden distorsionar la señal y dificultar su interpretación.
+
+Una de las formas de evaluar la calidad de una señal frente al ruido es mediante la relación señal-ruido (SNR, por sus siglas en inglés: Signal-to-Noise Ratio). El SNR es un parámetro que nos indica cuánta señal útil hay en comparación con la cantidad de ruido presente en la señal. Un SNR alto indica que la señal es clara y tiene poca interferencia, mientras que un SNR bajo sugiere que la señal está más afectada por el ruido.
+
+**Tipos de Ruido Añadidos**
+Para estudiar el impacto del ruido sobre la señal, se añadieron tres tipos diferentes de ruido a la señal EMG original:
+
+**Ruido Gaussiano**:
+Este tipo de ruido se genera utilizando una distribución normal (gaussiana), la cual tiene una media de 0 y una desviación estándar que depende de la potencia del ruido. Es un ruido aleatorio comúnmente utilizado en simulaciones debido a su comportamiento estadístico predecible.
+
+**Ruido de Impulso**:
+Este tipo de ruido se caracteriza por la aparición de valores extremos en puntos aleatorios de la señal. Los picos de ruido tienen amplitudes significativamente más altas o bajas que el resto de los datos, lo que genera artefactos o distorsiones abruptas en la señal.
+
+**Ruido de Artefacto**:
+Este ruido simula interferencias externas, como movimientos o contracciones involuntarias del músculo. Se caracteriza por fluctuaciones aleatorias en la señal, que no son parte de la actividad eléctrica muscular.
+
+## Código para cálculo de SNR:
 ```python
 # Función para calcular y mostrar SNR
 def calcular_snr():
@@ -178,13 +193,23 @@ def calcular_snr():
         ax.grid()
     plt.tight_layout()
     plt.show()
-
-
 ```
-Ruido de pulso  
-```python
 
-```
+## Explicación del código:
+
+Generación de ruido:
+Se genera ruido gaussiano, ruido de artefacto y ruido de impulso de acuerdo con el tipo de distorsión que se quiere simular.
+Cada tipo de ruido se añade a la señal original para crear versiones ruidosas de la señal EMG.
+
+Cálculo del SNR:
+Se calcula el SNR comparando la potencia de la señal original con la potencia del ruido añadido. El SNR se calcula para cada tipo de ruido (gaussiano, artefacto e impulso).
+
+Graficación:
+Se genera un gráfico de cuatro subgráficas para comparar la señal original con las versiones ruidosas y mostrar el SNR para cada tipo de ruido.
+
+![realizado con pyton](Funcion_de_probabilidad.jpeg)
+
+
 ## Librerias 
  wfdb
  
