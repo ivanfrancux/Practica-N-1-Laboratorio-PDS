@@ -207,13 +207,15 @@ Se calcula el SNR comparando la potencia de la señal original con la potencia d
 Graficación:
 Se genera un gráfico de cuatro subgráficas para comparar la señal original con las versiones ruidosas y mostrar el SNR para cada tipo de ruido.
 
-Imágenen de los resultados de SNR:
+## Imágenen de los resultados de SNR:
 
 ![SNR realizado con pyton](Figure_SNR.png)
 
 ## Resultados 
 
 ![Resuktados SNR](Figure_SNR.png)
+
+
 
 
 
