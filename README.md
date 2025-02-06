@@ -113,7 +113,7 @@ Para obtener la función de probabilidad de la señal EMG, utilizamos la librer�
 
 La imagen a continuación muestra la función de probabilidad de la señal EMG procesada:
 
-![Funcion de probabilidad realizado con pyton](Histograma.jpeg)
+![Funcion de probabilidad realizado con pyton](Funcion_de_probabilidad.jpeg)
 
 **Interpretación de la función de probabilidad**:
 La curva resultante muestra cómo se distribuyen los valores de amplitud de la señal EMG en torno a su media. El área bajo la curva representa la probabilidad acumulada, lo que nos da una idea de la "concentración" de los valores de la señal alrededor de la media. Si la señal sigue una distribución aproximadamente normal, la mayor parte de los valores se concentrarán cerca de la media, y la probabilidad disminuye a medida que nos alejamos de ella.
