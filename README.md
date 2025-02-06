@@ -22,7 +22,6 @@ fs = registro.fs  # Frecuencia de muestreo
 # Crear eje de tiempo
 tiempo = np.arange(len(senal)) / fs
 ```
-![Histograma realizado con pyton](señal.png)
 
 **Señal electromiográfica procesada**
 En esta sección se presenta la señal procesada y sus características estadísticas, las cuales fueron obtenidas utilizando herramientas de Python.
